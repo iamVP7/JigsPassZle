@@ -24,52 +24,51 @@ alert(s);
    // return ok;
 }
 </script>
+<link rel="stylesheet" type="text/css" href="main.css"></link>
 </head>
 <body>
-<table width="300" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
-<tr>
+
+<div align="center">
+
 <form name="form1" method="post" action="insert.php">
-<td>
-<table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
-<tr>
-<td colspan="3"><strong>Enter Registration Details</strong></td>
-</tr>
-<tr>
-<td  >Mail ID</td>
-<td  >:</td>
-<td > <?php session_start();
+<header>
+<h1>
+Enter Registration Details
+</h1></header>
+
+
+<section>
+<h2>Mail ID</h2>
+<h3>
+ <?php session_start();
   $x = $_SESSION['varname'];
-  echo '<div id="mailID">'.$x.'</div>'; ?></td>
-</tr>
-<tr>
-<td  >Name</td>
-<td  >:</td>
-<td ><input name="reguser"  type="text" id="reguser" required></td>
-</tr>
+  echo '<div id="mailID">'.$x.'</div>'; ?> </h3> <br />
+</section>
+<section>
+
+<h2>Name</h2>
+<input name="reguser"  type="text" id="reguser" required class="txtbox">
+</section>
+<section>
 
 
-<tr>
-<td  >Password</td>
-<td  >:</td>
-<td ><input name="mypass"  type="password" id="mypass" required></td>
-</tr>
+<h2>Password</h2>
 
-<tr>
-<td  >Conform Password</td>
-<td  >:</td>
-<td ><input name="myconpass"  type="password" onchange="passver()" id="myconpass" required></td>
-</tr>
-<tr>
-<tr>
-<td></td>
-<td></td>
-<td><input type="submit" name="Submit" value="Submit"></td>
-</tr>
-</table>
-</td>
+<input name="mypass"  type="password" id="mypass" required class="txtbox">
+</section>
+<section>
+
+<h2>Conform Password</h2>
+<input name="myconpass"  type="password" onchange="passver()" id="myconpass" required class="txtbox"> 
+</section>
+<section>
+
+<button type="submit" name="Submit" value="Submit">Submit</button>
+</section>
+<section>
+
+
 </form>
-</tr>
-</table>
 
  
 </body>

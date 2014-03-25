@@ -35,6 +35,8 @@ if (!mysql_query($sql,$con))
   {
   die('Error: ' . mysql_error());
   }
-echo "1 record added";
-
+else
+{
+header("location:upload.form.php");
+}
 ?>

@@ -1,14 +1,13 @@
 <html>
 <body>
-<form action="imageUpload.php" method="post" enctype="multipart/form-data">
-<fieldset>
-<legend>Image Upload</legend>
-<label for="userFile">Small image to upload: </label>
-<input type="file" size="40" name="userFile" id="userFile"/><br />
-<br />
-
-<input type="submit" value="Upload File" />
-</fieldset>
+ 
+<form action="imgup.php" method="post"
+enctype="multipart/form-data">
+<label for="file">Filename:</label>
+<input type="file" name="file" id="file"><br>
+<input type="submit" name="submit" value="Submit">
 </form>
+
+
 </body>
 </html>

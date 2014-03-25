@@ -1,36 +1,31 @@
 <html>
 <head>
- 
+ <link rel="stylesheet" type="text/css" href="main.css"></link>
 </head>
 
 
 <body>
-<table width="300" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
-<tr>
+<div align="center">
 <form name="form1" method="post" action="check.php">
-<td>
-<table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
-<tr>
-<td colspan="3"><strong>Email Registration </strong></td>
-</tr>
-<tr>
-<td width="78">Email</td>
-<td width="6">:</td>
-<td width="294"><input name="myregusername" type="email" id="myusername"></td>
-</tr>
+
+<header><h1>Email Registration</h1></header>
 
 
-<tr>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<section>
+<article>
+<h2>Email</h2>
+</article>
+<article>
+<input name="myregusername" type="email" id="myusername" class="txtbox">
+</article>
+</section>
 
-<td><input type="submit" name="Submit" value="Submit"></td>
-</tr>
-</table>
-</td>
+<article>
+<button type="submit" name="Submit" value="Submit">Submit</button>
+</article>
+
 </form>
-</tr>
-</table>
+</div>
 
  
 </body>

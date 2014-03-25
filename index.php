@@ -15,37 +15,42 @@ if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)
 }
 
 </script>
+
+<link rel="stylesheet" type="text/css" href="main.css"></link>
 </head>
 <body>
-<table width="300" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
-<tr>
+<div align="center">
 <form name="form1" method="post" onsubmit="return validateForm();" action="checklogin.php">
-<td>
-<table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
-<tr>
-<td colspan="3"><strong>Member Login </strong></td>
-</tr>
-<tr>
-<td width="78">Username</td>
-<td width="6">:</td>
-<td width="294"><input name="myusername" type="email" id="myusername"></td>
-</tr>
-<tr>
-<td>Password</td>
-<td>:</td>
-<td><input name="mypassword" type="password" id="mypassword"></td>
-</tr>
-<tr>
-<td><input type="reset" name="Cancel" value="Cancel"></td></td>
-<td>&nbsp;</td>
 
-<td><input type="submit" name="Submit" value="Login"></td>
-</tr>
-</table>
-</td>
+<header>
+<h1>Member Login</h1>
+</header>
+
+<section>
+<article>
+<h2>Username</h2>
+</article>
+<article>
+<input name="myusername" type="email" id="myusername" class="txtbox"> 
+</article>
+</section>
+<section>
+<article>
+<h2>Password</h2>
+</article>
+<article>
+<input name="mypassword" type="password" id="mypassword" class="txtbox"> 
+</article>
+</section>
+<section>
+<article>
+<button type="reset" name="Cancel" value="Cancel"> Cancel</button>
+<button type="submit" name="Submit" value="Login"> Login</button>
+</article>
+</section>
 </form>
 </tr>
-</table>
+</div>
 
  
 </body>
