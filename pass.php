@@ -25,6 +25,7 @@ alert(s);
 }
 </script>
 <link rel="stylesheet" type="text/css" href="main.css"></link>
+<title>Details Registration</title>
 </head>
 <body>
 

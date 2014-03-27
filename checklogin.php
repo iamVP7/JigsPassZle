@@ -31,9 +31,18 @@ if($count==1){
 // Register $myusername, $mypassword and redirect to file "login_success.php"
 session_register("myusername");
 session_register("mypassword"); 
+session_start();
+$_SESSION['varname'] =$myusername;
+
 header("location:login_success.php");
 }
 else {
 echo "Wrong Username or Password";
 }
 ?>
+
+<html>
+<head>
+<title>Login Check</title>
+</head>
+</html>

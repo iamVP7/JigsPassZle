@@ -10,11 +10,31 @@
 	Whcich is used to resize and slice the entire image into 9 sub parts and this will be help to load the imge faster in the post upload section.
 -------------------------------------->*/
 
-
 class JPEGSlicer
 {
+
 	function JPEGSlicer($directory, $temp_image,$selection,$resize) 
 	{
+
+session_start();
+  
+$host="localhost"; // Host name 
+$username="root"; // Mysql username 
+$password="viswa"; // Mysql password 
+$db_name="project"; // Database name 
+$tbl_name="images"; // Table name 
+
+// Connect to server and select databse.
+$con = mysql_connect("$host", "$username", "$password"); 
+
+if (!$con)
+  {
+  die('Could not connect: ' . mysql_error());
+  }
+
+mysql_select_db("$db_name",$con);
+
+
 		
 		
 		$this->image_info		=	getimagesize($temp_image);
@@ -65,7 +85,7 @@ class JPEGSlicer
 		$this->filename		=	array();
 		$full_width			=	$this->image_info[0];
 		$full_height		=	$this->image_info[1];
-		echo"<br>".$width." ".$height;
+		//echo"<br>".$width." ".$height;
 		$split_width		=	round($width/3);
 		$split_height		=	round($height/3);
 		
@@ -89,6 +109,13 @@ class JPEGSlicer
 
 
 		$this->filename[$i]	=	$path[$i].time().'.jpg';
+
+$reguser = "viswa";
+$temp = $this->filename[$i];
+//$sql="INSERT INTO $tbl_name (`username`, `imagename`) VALUES ('$reguser', '$temp')";
+
+
+ 
 		$cut_image	=	imagecreatetruecolor($split_width,$split_height);
 					
 		imagecopyresampled($cut_image,$new_img,0,0,$init_x,$init_y,$split_width,$split_height,$split_width,$split_height)or die('Cannot Resample');

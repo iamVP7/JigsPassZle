@@ -37,6 +37,6 @@ if (!mysql_query($sql,$con))
   }
 else
 {
-header("location:upload.form.php");
+header("location:upload_example.php");
 }
 ?>

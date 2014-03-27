@@ -17,8 +17,8 @@ echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 
 
+$myusername =$_SESSION['varname'];
 
-$myusername=$_SESSION['varname'];
 $sql = "SELECT * FROM `images` WHERE `username`='$myusername'";
 
 $result = mysqli_query($con,$sql);
@@ -126,7 +126,7 @@ num = num % 1000000;
 document.getElementById("nums").innerHTML = num;
 }
 </script>
-<title>Order The Images</title>
+<title>Time Calculation</title>
 </head>
 <body onload="randomcall()">
 <h1> Place your images in order according to the number below </h1>
@@ -165,7 +165,7 @@ document.getElementById("nums").innerHTML = num;
 </div>
 
 
-<form name="myForm" action="logintest.php" method="post">
+<form name="myForm" action="testingtime.php" method="post">
 <input type="hidden" id="child1" name="child1" visibility="hidden"></input>
 <input type="hidden" id="child2" name="child2" visibility="hidden"></input>
 <input type="hidden" id="child3" name="child3" visibility="hidden"></input>

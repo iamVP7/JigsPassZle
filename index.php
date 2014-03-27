@@ -1,22 +1,20 @@
+<?php
+unset ($_SESSION['varname']);
+?>
+
 <html>
 <head>
-<script type="text/javascript">
 
-function validateForm()
-{
-var x=document.forms["form1"]["myusername"].value;
-var atpos=x.indexOf("@");
-var dotpos=x.lastIndexOf(".");
-if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)
-  {
-  alert("Not a valid e-mail address");
-  return false;
-  }
-}
-
-</script>
 
 <link rel="stylesheet" type="text/css" href="main.css"></link>
+
+<style type ="text/css">
+a
+{
+text-decoration:none;
+}
+</style>
+<title>Welcome to Login</title>
 </head>
 <body>
 <div align="center">
@@ -43,6 +41,9 @@ if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)
 </article>
 </section>
 <section>
+<article>
+<h2><a href="http://localhost/register.php"> Register</a></h2>
+</article>
 <article>
 <button type="reset" name="Cancel" value="Cancel"> Cancel</button>
 <button type="submit" name="Submit" value="Login"> Login</button>
