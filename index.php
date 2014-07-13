@@ -42,7 +42,7 @@ text-decoration:none;
 </section>
 <section>
 <article>
-<h2><a href="http://localhost/register.php"> Register</a></h2>
+<h2><a href="http://php-viswaprasatg.rhcloud.com/register.php"> Register</a></h2>
 </article>
 <article>
 <button type="reset" name="Cancel" value="Cancel"> Cancel</button>
